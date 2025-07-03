@@ -22,5 +22,7 @@ console.log(accountCity);
 accountState
 console.log(accountState);
 
+// in table format
+console.log("Account Details");
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
  
