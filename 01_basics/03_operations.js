@@ -50,3 +50,45 @@ let gamecounter = 100
 gamecounter++; // post-increment
 ++gamecounter; // pre-increment
 console.log(gamecounter)
+
+console.log()
+
+
+// Comparison operations / Assignment operator
+console.log("Assignment Operations:");  
+
+console.log("5 == '5':", 5 == '5'); // true (loose equality)
+console.log("5 === '5':", 5 === '5'); // false (strict equality)
+console.log("5 != '5':", 5 != '5'); // false (loose inequality)
+console.log("5 !== '5':", 5 !== '5'); // true (strict inequality)
+console.log("5 < 10:", 5 < 10); // true     
+console.log("5 > 10:", 5 > 10); // false
+console.log("5 <= 10:", 5 <= 10); // true   
+console.log("5 >= 10:", 5 >= 10); // false
+
+// some problems with comparison operations
+console.log("'2' > 1 : ", '2' > 1); 
+console.log("'02' > 1 : ", '02' > 1); 
+
+console.log(" null > 0 : ", null > 0);
+console.log(" null < 0 : ", null < 0);
+console.log(" null == 0 : ", null == 0);
+console.log(" null == undefined : ", null == undefined);
+console.log(" null != 0 : ", null != 0);
+console.log(" null >= 0 : ", null >= 0);
+console.log(" null <= 0 : ", null <= 0);
+// the reason is that an equality check == and comparisons > < >= <= work differently.
+// Comparisonds convert null to a number, treating it as 0.
+// that's why null >= 0 is true and null > 0 is false
+
+console.log(" undefined == 0 : ", undefined == 0);
+console.log(" undefined > 0 : ", undefined > 0);
+console.log(" undefined < 0 : ", undefined < 0);
+console.log(" undefined >= 0 : ", undefined >= 0);
+console.log(" undefined <= 0 : ", undefined <= 0);
+console.log(" undefined != 0 : ", undefined != 0);
+console.log(" undefined == null : ", undefined == null);
+// undefined is converted to NaN in comparisons, which is not equal to any number, including 0.
+
+console.log(" undefined === null : ", undefined === null);
+// strict equality checks do not perform type coercion, so undefined and null are not equal.
