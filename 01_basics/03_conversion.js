@@ -168,3 +168,11 @@ true -> "true"
 null -> "null"
 undefined -> "undefined"
 */
+
+console.log("Some more Conversion Examples");
+console.log(+true); // 1 (unary plus converts boolean to number)
+// console.log(true+); // it gives error: Unexpected token '+'
+
+console.log(+false); // 0 (unary plus converts boolean to number)
+
+console.log(+""); // 0 (unary plus converts empty string to number)
