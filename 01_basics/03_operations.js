@@ -54,8 +54,8 @@ console.log(gamecounter)
 console.log()
 
 
-// Comparison operations / Assignment operator
-console.log("Assignment Operations:");  
+// Comparison operations
+console.log("Comparison Operations:");  
 
 console.log("5 == '5':", 5 == '5'); // true (loose equality)
 console.log("5 === '5':", 5 === '5'); // false (strict equality)
