@@ -1,14 +1,31 @@
 // Date and Time in JavaScript
 const now = new Date();
 console.log("Current Date and Time:", now); // Default format is ISO 8601 - this format is not readable
+
 console.log("Current Date and Time toString:", now.toString()); // this format is more readable
 console.log("Current Date and Time toDateString:", now.toDateString()); // human-readable date
 console.log("Current Date and Time toTimeString:", now.toTimeString()); // human-readable
+
 console.log("Current Date and Time toISOString:", now.toISOString()); // ISO format is best for storage
+
 console.log("Current Date and Time toJSON:", now.toJSON()); // JSON format
+
 console.log("Current Date and Time toLocaleDateString:", now.toLocaleDateString()); // locale-specific
 console.log("Current Date and Time toLocaleTimeString:", now.toLocaleTimeString()); // locale-specific
 console.log("Current Date and Time toLocaleString:", now.toLocaleString()); // locale-specific
+
+now.toLocaleString('default', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    timeZoneName: 'short'
+    // click ctrl+space to see more options
+})
+
 console.log("Current Date and Time toUTCString:", now.toUTCString()); // UTC format
 console.log()
 
@@ -37,3 +54,18 @@ console.log("Hours", now.getHours()); // Hour (0-23)
 console.log("Minutes", now.getMinutes());
 console.log("Seconds", now.getSeconds()); // Seconds (0-59)
 console.log()
+
+let myTimeStamp = Date.now(); // Returns the number of milliseconds since January 1, 1970
+let createdDate = new Date("07-13-2025"); // Date string format can vary by locale
+
+console.log("Current Timestamp:", myTimeStamp);
+console.log("Created Date from Timestamp:", createdDate.getTime()); // Get time in milliseconds
+console.log()
+
+console.log("Date.now() it gives time in millisecond", Date.now());
+console.log("Date.now() it gives time in second", Date.now() / 1000); // Convert to seconds
+
+console.log("Date.now() it gives time in minute", Date.now() / (1000    * 60)); // Convert to minutes
+console.log("Date.now() it gives time in hour", Date.now() / (1000 * 60 * 60)); // Convert to hours
+console.log("Date.now() it gives time in day", Date.now() / (1000 * 60 * 60 * 24)); // Convert to days
+
