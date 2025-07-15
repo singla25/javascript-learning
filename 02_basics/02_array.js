@@ -49,6 +49,7 @@ console.log(Array.isArray(object)); // it checks if the variable is an array, re
 console.log("Object to Array", convert_to_array_from_object); // it give empty array because object is not iterable we have to tell that make the array of keys or values of the object 
 
 console.log()
+
 let score1 = 100;
 let score2 = 200;
 let score3 = 300;
