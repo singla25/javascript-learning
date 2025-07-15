@@ -37,19 +37,18 @@ console.log("Flattened Array", real_another_array);
 console.log()
 
 const string = "Sahil";
-const object = { name: "Sahil" };
-const convert_to_array1 = Array.from(string);
-const convert_to_array2 = Array.from(object);
-
+const convert_to_array_from_string = Array.from(string);
 console.log(Array.isArray(string)); // it checks if the variable is an array, returns false for string
-console.log("String to Array", convert_to_array1); // it converts a string to an array of characters
+console.log("String to Array", convert_to_array_from_string); // it converts a string to an array of characters
 
 console.log()
 
+const object = { name: "Sahil" };
+const convert_to_array_from_object = Array.from(object);
 console.log(Array.isArray(object)); // it checks if the variable is an array, returns false for object
-console.log("Object to Array", convert_to_array2); // it give empty array because object is not iterable 
-// we have to tell that make the array of keys or values of the object 
+console.log("Object to Array", convert_to_array_from_object); // it give empty array because object is not iterable we have to tell that make the array of keys or values of the object 
 
+console.log()
 let score1 = 100;
 let score2 = 200;
 let score3 = 300;
