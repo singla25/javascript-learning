@@ -1,1 +1,0 @@
-const real_another_array = another_array.flat(Infinity)
