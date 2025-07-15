@@ -37,16 +37,38 @@ console.log("Flattened Array", real_another_array);
 console.log()
 
 const string = "Sahil";
-const convert_to_array_from_string = Array.from(string);
-console.log(Array.isArray(string)); // it checks if the variable is an array, returns false for string
-console.log("String to Array", convert_to_array_from_string); // it converts a string to an array of characters
+const object = { name: "Sahil" };
+console.log(Array.isArray(string)); // it checks if the string is an array, returns false
+console.log(Array.isArray(object)); // it checks if the object is an array, returns false
+
+const string1 = "Sahil";
+const convert_to_array_from_string = Array.from(string1); // it converts a string to an array of characters
+console.log("String to Array", convert_to_array_from_string);
 
 console.log()
 
-const object = { name: "Sahil" };
-const convert_to_array_from_object = Array.from(object);
-console.log(Array.isArray(object)); // it checks if the variable is an array, returns false for object
-console.log("Object to Array", convert_to_array_from_object); // it give empty array because object is not iterable we have to tell that make the array of keys or values of the object 
+const object1 = { name: "Sahil" };
+const convert_to_array_from_object = Array.from(object1); 
+console.log("Object to Array", convert_to_array_from_object); // it give empty array because object is not iterable
+
+console.log()
+
+// Converting an object to an array
+// we can convert an object to an array using Object.values(), Object.keys(), or Object.entries()
+const object2 = { name: "Sahil", age: 23 };
+
+const arrValues = Object.values(object2);
+console.log("Object Values:", arrValues); // it gives an array of values of the object
+
+const arrKeys = Object.keys(object2);
+console.log("Object Keys:", arrKeys); // it gives an array of keys of the object
+
+const arrEntries = Object.entries(object2);
+console.log("Object Entries:", arrEntries); // it gives an array of key-value pairs of the object
+
+console.log("Object Entries with map:");
+const arr = Object.entries(object2).map(([key, value]) => `${key}: ${value}`);
+console.log(arr); // it converts the object to an array of strings in the format "key: value"
 
 console.log()
 
@@ -56,4 +78,7 @@ let score3 = 300;
 const scores = Array.of(score1, score2, score3);
 console.log("Scores Array using Array.of", scores);
 // it creates a new array with the given elements
-console.log()
+// it flattens the array to a single level and returns a new array
+
+let arr1 = Array.of(1, 2, 3, 4);
+console.log(arr1); // it creates a new array with the given elements
