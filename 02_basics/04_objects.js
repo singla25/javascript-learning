@@ -88,6 +88,7 @@ const users = [
 
 users[1].email
 console.log(tinderUser)
+console.log()
 
 console.log(Object.keys(tinderUser)); // Returns an array of keys in the object
 console.log(Object.values(tinderUser)); // Returns an array of values in the object
