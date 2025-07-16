@@ -95,3 +95,20 @@ console.log(Object.values(tinderUser)); // Returns an array of values in the obj
 console.log(Object.entries(tinderUser)); // Returns an array of key-value pairs in the object
 
 console.log(tinderUser.hasOwnProperty("name")); // Checks if the object has a property named "name"
+console.log()
+
+
+// Destructuring objects
+const course = {
+    courseName: "JavaScript Basics",
+    price: '999',
+    courseInstructor: "Hitesh Choudhary",
+}
+
+const {courseInstructor} = course
+console.log(courseInstructor); // Extracts the courseInstructor property from the course object
+console.log()
+
+const {courseInstructor: instructor} = course; // Renames the extracted property to instructor
+console.log(instructor); // Logs the value of instructor
+console.log()
