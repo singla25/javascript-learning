@@ -1,0 +1,1 @@
+console.log(person2.greeting()); // Calls the function and outputs 'Hello Buddy'
