@@ -59,9 +59,50 @@ console.log()
 function userMessage(username = 'Sahil') {
     return `${username} has just logged in`
 }
-const user = userMessage()
-console.log(user) // Sahil has just logged in
+const user1 = userMessage()
+console.log(user1) // Sahil has just logged in
 
 const user2 = userMessage('Rajiv')
 console.log(user2) // Rajiv has just logged in
+console.log()
+
+
+
+// ...rest operator
+function calculateCartPrice(...num) {
+    return num
+}
+const cartValue = calculateCartPrice(100, 200, 300)
+console.log(cartValue)
+console.log()
+
+function calculatePrice(val1, val2, ...rest) {
+    console.log("rest values", rest)
+}
+const price = calculatePrice(100, 200, 300, 400, 500)
+console.log(price) // rest values [ 300, 400, 500 ]
+console.log()
+
+const user = {
+    username: 'sahil',
+    price: 100,
+}
+
+function handleObject(anyobject) {
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`)
+}
+handleObject(user)
+
+handleObject({
+    username: 'rajiv',     
+    price: 200,
+})
+console.log()
+
+const array = [1, 2, 3, 4, 5]
+function returnSecondValue(getArray) {
+    return getArray[1]
+}
+console.log(returnSecondValue(array))
+console.log([100, 200, 300, 400, 500])
 console.log()
