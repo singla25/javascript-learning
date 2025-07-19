@@ -41,12 +41,14 @@ const result = add(5, 10)
 console.log(result) // 15
 console.log()
 
+
 function addNew(num1, num2) {
     return num1 + num2
 }
 const resultNew = addNew(15, 7)
 console.log(resultNew) 
 console.log()
+
 
 function loginUserMessage(username) {
     return `${username} has just logged in`
@@ -83,6 +85,7 @@ const price = calculatePrice(100, 200, 300, 400, 500)
 console.log(price) // rest values [ 300, 400, 500 ]
 console.log()
 
+ // Objects
 const user = {
     username: 'sahil',
     price: 100,
@@ -99,10 +102,11 @@ handleObject({
 })
 console.log()
 
+// Arrays
 const array = [1, 2, 3, 4, 5]
 function returnSecondValue(getArray) {
     return getArray[1]
 }
 console.log(returnSecondValue(array))
-console.log([100, 200, 300, 400, 500])
+console.log(returnSecondValue([100, 200, 300, 400]))
 console.log()
