@@ -56,3 +56,54 @@ if(true) {
     console.log('Inner a value (Block Scope): ', a)
 }
 console.log('Outer a value (Global scope): ', a)
+console.log()
+
+
+// Nested Scope
+console.log('Nested Scope')
+console.log()
+
+function one() {
+  const username = 'Sahil'
+
+  function two() {
+    const website = 'Youtube'
+    console.log(username);
+  }
+  // console.log(website);
+
+  two()
+}
+one()
+console.log()
+
+if (true) {
+  const username = "Rajiv"
+  if (username === 'Rajiv') {
+    const website = ' new Youtube Channel'
+    console.log(username + website)
+  }
+  // console.log(website)
+}
+// console.log(username)
+console.log()
+
+
+
+console.log('--------------------------')
+// +++++++++++++++++ Interesting ++++++++++++++
+
+console.log("Function declared with name: ", addOne(5))
+function addOne(num) {
+  return num + 1
+}
+console.log("Function declared with name: ", addOne(5))
+
+
+// expression - it is like variable which is more powerful and hold anything
+// console.log("function declared as a expression: ", addTwo(5)) this will not work
+const addTwo = function(num) {
+  return num + 2
+}
+console.log("function declared as a expression: ", addTwo(5))
+
