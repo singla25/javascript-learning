@@ -1,15 +1,10 @@
-const normalFunction = function() {
-//     let username = 'Rajiv'
-//     console.log(this.username)
-//     console.log(this)
-// }
-// normalFunction()
-// console.log()
+// IIFE - Immediately Invoked Function Expression
 
-// const arrowFunction = () => {
-//     let username = 'Rajiv'
-//     console.log(this.username)
-//     console.log(this)
-// }
-// arrowFunction()
-// console.log()
+function normalChai() {
+    console.log(`DB CONNECTED`)
+}
+normalChai()
+
+(function IIFEchai() {
+    console.log(`DB CONNECTED`);
+})()
