@@ -52,6 +52,7 @@ const myCoding = [
 
 myCoding.forEach( (item) => {
     console.log(`Language Name : ${item.languageName} and Language file name : ${item.languageFileName}`)
+    console.log(item.languageName, item.languageFileName)
 })
 console.log()
 
