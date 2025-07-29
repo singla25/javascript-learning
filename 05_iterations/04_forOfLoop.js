@@ -32,7 +32,7 @@ map.set('IN', "India");
 map.set('USA', "United States of America")
 map.set('Fr', "France")
 
-// console.log(map)
+console.log(map)
 console.log()
 
 for (const [i, j] of map) {
