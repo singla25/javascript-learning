@@ -27,3 +27,4 @@ newArray = myArray
             .map((num) => num - 5)
             .filter( (num) => num >= 40)
 console.log(newArray)
+console.log()
