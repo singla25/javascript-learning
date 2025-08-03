@@ -20,11 +20,11 @@
     const parent = document.querySelector('.parent')
     console.log(parent);
     
-    console.log(parent.children);
+    console.log(parent.children); // childeen node
     
     console.log(parent.children[1]);
     
-    console.log(parent.children[1].innerHTML);
+    console.log(parent.children[1].innerHTML);  // accessing children text
     
     for(let i = 0; i < parent.children.length; i++) {
         console.log(parent.children[i].innerHTML)
@@ -32,14 +32,15 @@
 
     parent.children[1].style.color = 'orange'
     
-    console.log(parent.firstElementChild);
-    console.log(parent.lastElementChild);
+    console.log(parent.firstElementChild);  // firstElementChild
+    console.log(parent.lastElementChild);  // lastElementChild
 
     const day1 = document.querySelector('.day')
     console.log(day1);
     console.log(day1.parentElement);
-    console.log(day1.nextElementSibling);
+    console.log(day1.nextElementSibling);   // nextElementSibling
     
-    console.log('Nodes: ', parent.childNodes)
+    console.log('Nodes: ', parent.childNodes)  // most imp
+    // in js space and line break is also a node(text)
 </script>
 </html>
