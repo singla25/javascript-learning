@@ -66,6 +66,7 @@
     title.innerHTML
     title.innerText
 
+
     // query Selector
     document.querySelector('h1')
     document.querySelector('h2')
@@ -102,9 +103,25 @@
     myH1[0].style.colr = 'green' - works
 
     
+    // get element by class name
+    document.getElementsByClassName('heading')
+
+    getElementsByClassName('list-item')
+    const tempClassList = document.getElementsByClassName('list-item')
+    tempClassList
+
+    tempClassList.forEach(function(li) {
+        console.log(li)
+    }) // return error we can't apply foreach directly to HTMLCollection
+
+    // convert into array first
+    Array.from(tempClassList)
+    const convertedToArray = Array.from(tempClassList)
+    convertedToArray
+    convertedToArray.forEach((li)=> {
+        li.style.color = 'orange'
+    })
     
-
-
 </script> -->
 
 </html>
