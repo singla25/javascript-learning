@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    
+</body>
+<script>
+    const createDiv = document.createElement('div')
+    console.log(createDiv)
+
+    createDiv.className = 'main'
+    createDiv.id = Math.round(Math.random() * 10 + 1)
+
+    createDiv.setAttribute('title', 'generated title')
+
+    createDiv.style.backgroundColor = 'orange'
+    createDiv.style.padding = '12px'
+    
+    // createDiv.innerText = "My first div through JS"
+    const addText = document.createTextNode('My first div text through js')
+    createDiv.appendChild(addText)
+
+    // till now every thing is in console nothing is in web page
+
+    document.body.appendChild(createDiv)
+    // now we see dic in o
+    // now we know how to create a div then we wrap this in a function called createADiv and use that function in where we need
+
+</script>
+</html>
