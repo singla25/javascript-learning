@@ -84,6 +84,24 @@
     turnGreen.innerText = "Six"
 
 
+    // query Selector All
+    document.querySelectorAll('ul')
+    document.querySelectorAll('li')
+
+    const tempList = document.querySelectorAll('ul')
+    tempList
+    tempList.style.color = 'green' - it give error
+    tempList[0].style.color = 'green' - it works
+    tempList.forEach( (l) => {
+    l.style.backgroundColor = 'yellow'
+    })
+
+    const myH1 = document.querySelectorAll('h1')
+    myH1
+    myH1.style.color = 'green' - error
+    myH1[0].style.colr = 'green' - works
+
+    
     
 
 
