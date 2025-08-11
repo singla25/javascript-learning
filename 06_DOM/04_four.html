@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 4 - edit and remove</title>
+</head>
+
+<body style="background-color: #212121; color: #fff">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addlanguage('Python');
+    addlanguage('Java');
+    addlanguage('C++');
+    // this approach is not so good because each time it traverse the DOM to find the .language class
+    // and then append the li element to it
+
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage('Go');
+    addOptiLanguage('Rust');
+    // in this no traversing is their due to which it became good approach
+
+
+    // now we will edit the li element
+    const thirdLi = document.querySelector('li:nth-child(3)');
+
+    // Approach 1: using innerText or textContent
+    // thirdLi.innerHTML = 'JavaScript - Edited'; 
+    // this approach is not good apporach as it traverses the DOM to find the element and then edit it
+
+
+    // Approach 2: using textContent
+    const newli = document.createElement('li');
+    newli.textContent = 'TypeScript';
+    thirdLi.replaceWith(newli);
+    // this is better approach as it directly replaces the element without traversing the DOM
+
+    const firstLang = document.querySelector('li:first-child');
+    firstLang.outerHTML = '<li>JavaScript - Edited</li>';
+    console.log(firstLang);
+
+
+    // now we will remove the li element
+    const lastLi = document.querySelector('li:last-child');
+    console.log(lastLi);
+    // Approach 1: using remove()   
+    lastLi.remove();
+
+
+    // Approach 2: using parentNode.removeChild()
+    const secondLastLi = document.querySelector('li:nth-last-child(2)');
+    secondLastLi.parentNode.removeChild(secondLastLi);
+    // this is also a good approach as it directly removes the element without traversing the DOM
+
+
+</script>
+
+</html>
