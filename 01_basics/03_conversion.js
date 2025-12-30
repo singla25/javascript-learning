@@ -4,6 +4,10 @@ console.log(typeof(score));
 console.log();
 
 console.log("Conversion to Number");
+console.log();
+
+console.log("String");
+console.log();
 
 let value = "44"
 console.log(typeof value);
@@ -14,6 +18,8 @@ console.log(typeof valueInNumber);
 console.log(valueInNumber);
 console.log();
 
+console.log("String + Number 44abc (NaN number)");
+console.log();
 
 let value1 = "44abc"
 console.log(typeof value1);
@@ -24,6 +30,8 @@ console.log(typeof valueInNumber1);
 console.log(valueInNumber1); // NaN (Not a Number) is returned when the conversion fails
 console.log();
 
+console.log("Null");
+console.log();
 
 let value2 = null
 console.log(typeof value2);
@@ -34,6 +42,8 @@ console.log(typeof valueInNumber2);
 console.log(valueInNumber2); // 0 (null is converted to 0 in number conversion)
 console.log();
 
+console.log("Undefined");
+console.log();
 
 let value3 = undefined
 console.log(typeof value3);
@@ -44,13 +54,31 @@ console.log(typeof valueInNumber3);
 console.log(valueInNumber3); // NaN (undefined is converted to NaN in number conversion)
 console.log();
 
-let value4 = false
-console.log(typeof value4);     
-console.log(typeof(value4));
+console.log("False");
+console.log();
 
-let valueInNumber4 = Number(value4);
-console.log(typeof valueInNumber4);
-console.log(valueInNumber4); // 1 (true is converted to 1 in number conversion)
+let valueFalse4 = false
+console.log(typeof valueFalse4);     
+console.log(typeof(valueFalse4));
+
+let valueInNumberFalse4 = Number(valueFalse4);
+console.log(typeof valueInNumberFalse4);
+console.log(valueInNumberFalse4); // 0 (false is converted to 0 in number conversion)
+console.log();
+
+console.log("True");
+console.log();
+
+let valueTrue4 = true
+console.log(typeof valueTrue4);     
+console.log(typeof(valueTrue4));
+
+let valueInNumberTrue4 = Number(valueTrue4);
+console.log(typeof valueInNumberTrue4);
+console.log(valueInNumberTrue4); // 1 (true is converted to 1 in number conversion)
+console.log();
+
+console.log("String");
 console.log();
 
 let value5 = "sahil"
@@ -72,7 +100,10 @@ true -> 1
 "sahil" -> NaN
 */
 
+console.log();
 console.log("Conversion to Bollean");
+console.log();
+
 let isLoggedIn = 1
 console.log(typeof isLoggedIn);
 
@@ -169,7 +200,7 @@ null -> "null"
 undefined -> "undefined"
 */
 
-console.log("Some more Conversion Examples");
+console.log("Imp : Some more Conversion Examples");
 console.log(+true); // 1 (unary plus converts boolean to number)
 // console.log(true+); // it gives error: Unexpected token '+'
 

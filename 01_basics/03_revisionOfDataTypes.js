@@ -23,10 +23,12 @@ console.log("anotherId:", anotherId); // Symbol(12345)
 console.log("is id === anotherId:", id === anotherId); // false, symbols are unique
 
 const heros = ['Neeraj', 'Rohit', 'Virat'];
+
 let myObj = {
     name : 'Sahil',
     age : 23,
 }
+
 const myFunction = function() {
     console.log("Hello, Sahil!");
 }

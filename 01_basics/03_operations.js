@@ -20,6 +20,7 @@ console.log();
 
 // String concatenation
 console.log("String Concatenation:");
+console.log();
 
 let firstName = "Sahil";
 let lastName = "Singla";
@@ -37,7 +38,7 @@ console.log("Concatenation with number '5' + 2 + 2 :", '5' + 2 + 2); // "522"
 console.log("Concatenation with number 5 + '2' + 2 :", 5 + '2' + 2); // "522"
 console.log("Concatenation with number 5 + 2 + '2' :", 5 + 2 + '2'); // "72"
 console.log("Concatenation with number '5' + 2 + '2' :", '5' + 2 + '2'); // "522"
-console.log("Concatenation with boolean:", "5" + true); // "5true
+console.log("Concatenation with boolean:", "5" + true); // "5true"
 console.log();
 
 
@@ -93,5 +94,6 @@ console.log(" undefined != 0 : ", undefined != 0);
 console.log(" undefined == null : ", undefined == null);
 // undefined is converted to NaN in comparisons, which is not equal to any number, including 0.
 
+console.log()
 console.log(" undefined === null : ", undefined === null);
 // strict equality checks do not perform type coercion, so undefined and null are not equal.

@@ -1,8 +1,8 @@
 // Numbers
 
 const score = 400
-
 const balance = new Number(1120.876578)
+
 console.log(balance)
 console.log("Type of balance: ", typeof balance); // object
 
