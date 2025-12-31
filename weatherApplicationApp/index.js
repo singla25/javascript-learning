@@ -1,0 +1,66 @@
+function formatTime(timestamp) {
+  const date = new Date(timestamp * 1000);
+  return date.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+}
+
+function formatDate() {
+  const date = new Date();
+  return date.toDateString();
+}
+
+function getWeatherIcon(weather) {
+  switch (weather) {
+    case "Clear": return "☀️";
+    case "Clouds": return "☁️";
+    case "Rain": return "🌧️";
+    case "Drizzle": return "🌦️";
+    case "Thunderstorm": return "⛈️";
+    case "Snow": return "❄️";
+    case "Mist":
+    case "Haze":
+    case "Fog": return "🌫️";
+    default: return "🌍";
+  }
+}
+
+
+const apiKey = "cd75bc44fdc91e82ad765ee40e6e76a7";
+
+function getWeather() {
+  const city = document.getElementById("city").value;
+
+  if (!city) {
+    alert("Please enter city name");
+    return;
+  }
+
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+
+      if (data.cod === 404) {
+        document.getElementById("result").innerHTML = "City not found ❌";
+        return;
+      }
+
+      const icon = getWeatherIcon(data.weather[0].main);
+
+      document.getElementById("result").innerHTML = `
+        <h3>${data.name}</h3>
+        <p>📅 Date: ${formatDate()}</p>
+        <p>${icon} Weather: ${data.weather[0].main}</p>
+        <p>🌡️ Temp: ${data.main.temp} °C</p>
+        <p>🌅 Sunrise: ${formatTime(data.sys.sunrise)}</p>
+        <p>🌇 Sunset: ${formatTime(data.sys.sunset)}</p>
+        <p>💧 Humidity: ${data.main.humidity}%</p>
+        <p>💨 Wind: ${data.wind.speed} m/s</p>
+        <p>👀 Visibility: ${data.visibility / 1000} km</p>
+      `;
+    })
+    .catch(err => console.error(err));
+}
