@@ -10,6 +10,9 @@ console.log("balance.toFixed(2): ", balance.toFixed(2)); // Formatting number to
 
 console.log("balance.toPrecision(3): ", balance.toPrecision(3)); // Formatting number to 4 significant digits
 
+const newBalance = new Number(12345678)
+console.log("newBalance.toPrecision(3): ", newBalance.toPrecision(7)); // Formatting number to 4 significant digits
+
 console.log("balance.toString(): ", balance.toString()); // Converting number to string 
 
 console.log("balance.valueOf(): ", balance.valueOf()); // Getting primitive value of number object
@@ -28,11 +31,11 @@ console.log()
 console.log("Math.PI: ", Math.PI); // Value of PI
 console.log("Math.abs(-10): ", Math.abs(-10)); // Absolute value of -10
 
-console.log("Math.round(4.4): ", Math.round(4.4)); // Rounding 4.6 to nearest integer
+console.log("Math.round(4.4): ", Math.round(4.4)); // Rounding 4.4 to nearest integer
 console.log("Math.round(4.6): ", Math.round(4.6)); // Rounding 4.6 to nearest integer
 
-console.log("Math.ceil(4.4): ", Math.ceil(4.4)); // Rounding 4.4 up to nearest integer
-console.log("Math.floor(4.6): ", Math.floor(4.6)); // Rounding 4.6 down to nearest integer
+console.log("Math.ceil(4.4): ", Math.ceil(4.4)); // Rounding 4.4 up to nearest ceil integer
+console.log("Math.floor(4.6): ", Math.floor(4.6)); // Rounding 4.6 down to nearest floor integer
 
 console.log("Math.min(1, 2, 3): ", Math.min(1, 2, 3)); // Minimum value among 1, 2, and 3
 console.log("Math.max(1, 2, 3): ", Math.max(1, 2, 3)); // Maximum value among 1, 2, and 3
