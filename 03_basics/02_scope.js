@@ -48,12 +48,13 @@ example();
 // console.log(localVar); // error
 console.log()
 
-var c = 50
 let a = 200
+var c = 50
 if(true) {
-    let a = 30
-    const b = 40
-    console.log('Inner a value (Block Scope): ', a)
+  let a = 30
+  const b = 40
+  console.log('Inner a value (Block Scope): ', a);
+  console.log(`Sum of a ${a} and b ${b}: a+b ${a + b}`);
 }
 console.log('Outer a value (Global scope): ', a)
 console.log()

@@ -1,6 +1,7 @@
 // Functions
 
 function sayMyName() {
+    console.log('sayMyName function contains: ');
     console.log('S')
     console.log('A')
     console.log('H')
@@ -15,13 +16,14 @@ console.log()
 
 function addTwoNumbers(num1, num2) {
     num = num1 + num2
-    console.log(num)
+    console.log(`Addition of Two Numbers ${num1} and ${num2}: ${num}`);
 }
 
 addTwoNumbers(5, 10)
 addTwoNumbers(4, '5')
 addTwoNumbers(4, 'a')
 addTwoNumbers(4, null)
+console.log()
 
 const addition = addTwoNumbers(5, 10)
 console.log(addition) // undefined, because the console does not return a value
@@ -55,7 +57,7 @@ function loginUserMessage(username) {
 }
 
 const loginUser = loginUserMessage('Sahil')
-console.log(loginUser) // Sahil has just logged in
+console.log("Message: ", loginUser) // Sahil has just logged in
 console.log()
 
 function userMessage(username = 'Sahil') {
@@ -75,17 +77,18 @@ function calculateCartPrice(...num) {
     return num
 }
 const cartValue = calculateCartPrice(100, 200, 300)
-console.log(cartValue)
+console.log("...rest operator(...num) : ", cartValue)
 console.log()
 
 function calculatePrice(val1, val2, ...rest) {
+    console.log(val1, val2)
     console.log("rest values", rest)
 }
 const price = calculatePrice(100, 200, 300, 400, 500)
 console.log(price) // rest values [ 300, 400, 500 ]
 console.log()
 
- // Objects
+// Objects
 const user = {
     username: 'sahil',
     price: 100,

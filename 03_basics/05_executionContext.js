@@ -10,21 +10,26 @@
 // -Execution Phase 
 
 // Try this in snippet in google chrome to see visual relization
-function one() {
-    console.log('one')
-}
+// function one() {
+//     console.log('one')
+// }
 
-function two() {
-    console.log('two')
-}
+// function two() {
+//     console.log('two')
+// }
 
-function three() {
-    console.log('three')
-}
+// function three() {
+//     console.log('three')
+// }
 
-one()
-two()
-three()
+// one();
+// console.log();
+
+// two();
+// console.log();
+
+// three();
+// console.log();
 
 
 function one() {
@@ -41,6 +46,11 @@ function three() {
     console.log('three')
 }
 
-one()
-two()
-three()
+one();
+console.log();
+
+two();
+console.log();
+
+three();
+console.log();

@@ -5,18 +5,18 @@ const user = {
     price: 999,
 
     welcomeMessage: function() {
-        console.log(`${this.username} , welcome to website`)
+        console.log(`${this.username}, welcome to new life`)
         console.log(this)
     }
 }
-
 user.welcomeMessage()
+console.log()
 
 user.username = "Rajiv"
 user.welcomeMessage()
 console.log()
 
-console.log(this) // in node environment 'this' refers to empty because their is no contest
+console.log(this) // In node environment 'this' refers to empty because their is no contest
 // In browser: refers to window object
 console.log()
 
@@ -24,6 +24,8 @@ function chai() {
     console.log(this) // when we call it in a function it gives us a very large references
 }
 chai()
+console.log()
+
 
 function code(){
     let username = 'Sahil'  // local defined
@@ -32,16 +34,15 @@ function code(){
 code()
 console.log()
 
-
-// ---------- Arrow Function ----------
-console.log('---------- Arrow Function ----------')
-
 const normalFunction = function() {
     let username = 'Rajiv'
     console.log(this.username)
 }
 normalFunction()
 console.log()
+
+// ---------- Arrow Function ----------
+console.log('---------- Arrow Function ----------')
 
 const arrowFunction = () => {
     let username = 'Rajiv'
@@ -52,18 +53,19 @@ console.log()
 
 // basic syntax of arrow function () => {}
 // it can also store in a variable
-const addOne = (num1, num2) => {
+const add = (num1, num2) => {
     return num1 + num2
 }
-console.log(addOne(3, 4))
+console.log(add(3, 4))
 
 // implicit return
-const addTwo = (num1, num2) => num1 + num2
-console.log(addTwo(3, 4))
+const addOne = (num1, num2) => num1 + num2
+console.log(addOne(3, 4))
 
-const addThree = (num1, num2) => (num1 + num2)
+const addTwo = (num1, num2) => (num1 + num2)
 console.log(addTwo(3, 4))
 // if we wrap them in {} then we have to write return keyboard but if we wrap in () then no need of return
+console.log();
 
 const forObject = () => ({username: 'Sahil', age: 23})
 console.log(forObject())
