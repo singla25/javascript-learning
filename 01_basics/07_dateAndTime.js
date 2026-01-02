@@ -65,7 +65,7 @@ console.log()
 console.log("Date.now() it gives time in millisecond", Date.now());
 console.log("Date.now() it gives time in second", Date.now() / 1000); // Convert to seconds
 
-console.log("Date.now() it gives time in minute", Date.now() / (1000    * 60)); // Convert to minutes
+console.log("Date.now() it gives time in minute", Date.now() / (1000 * 60)); // Convert to minutes
 console.log("Date.now() it gives time in hour", Date.now() / (1000 * 60 * 60)); // Convert to hours
 console.log("Date.now() it gives time in day", Date.now() / (1000 * 60 * 60 * 24)); // Convert to days
 

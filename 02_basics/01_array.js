@@ -36,6 +36,7 @@ console.log()
 
 const newArr = arr.join();
 console.log("join():", newArr); // "1,2,3,4,5"
+console.log(typeof newArr);
 console.log()
 
 const newArr2 = arr.slice(1, 3); // Extracts elements from index 1 to 2 (3 is not included)

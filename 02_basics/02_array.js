@@ -41,9 +41,26 @@ const object = { name: "Sahil" };
 console.log(Array.isArray(string)); // it checks if the string is an array, returns false
 console.log(Array.isArray(object)); // it checks if the object is an array, returns false
 
-const string1 = "Sahil";
-const convert_to_array_from_string = Array.from(string1); // it converts a string to an array of characters
-console.log("String to Array", convert_to_array_from_string);
+console.log()
+
+const string1 = "Sahil Singla";
+const convert_to_array_from_string1 = string1.split(" "); // it splits the string by space and then add then into array
+console.log("String 1 : ", string1)
+console.log("String to Array", convert_to_array_from_string1);
+
+console.log()
+
+const string2 = "Sahil";
+const convert_to_array_from_string2 = Array.from(string2); // it converts a string to an array of characters
+console.log("String 2 : ", string2)
+console.log("String to Array", convert_to_array_from_string2);
+
+console.log()
+
+const string3 = "Sahil Singla";
+const convert_to_array_from_string3 = Array.from(string3); // it converts a string to an array of characters
+console.log("String 3 : ", string3)
+console.log("String to Array", convert_to_array_from_string3);
 
 console.log()
 
@@ -77,8 +94,20 @@ let score2 = 200;
 let score3 = 300;
 const scores = Array.of(score1, score2, score3);
 console.log("Scores Array using Array.of", scores);
+
+console.log()
+
+const word1 = "Sahil";
+const word2 = "Rajiv";
+const word3 = "Uday";
+const word4 = "Rahul";
+const word5 = "Daljit";
+const convert_to_array_from_words = Array.of(word1, word2, word3, word4, word5, word1, word3, word5);
+console.log("Array from words", convert_to_array_from_words);
 // it creates a new array with the given elements
 // it flattens the array to a single level and returns a new array
+
+console.log()
 
 let arr1 = Array.of(1, 2, 3, 4);
 console.log(arr1); // it creates a new array with the given elements
