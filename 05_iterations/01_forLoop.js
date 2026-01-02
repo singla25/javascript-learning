@@ -65,6 +65,15 @@ for(let j = 1; j <= 20; j++){
 }
 console.log()
 
+for(let j = 1; j <= 20; j++){
+    if (j % 5 == 0) {
+        console.log(`${j} is divisible by 5`);
+        continue;
+    }
+    console.log(`Value of j is ${j}`)
+}
+console.log()
+
 for (let i = 1; i <= 10; i++) {
   if (i === 4) {
     console.log(`4 Detected and skipped`)

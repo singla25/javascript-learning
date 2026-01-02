@@ -20,16 +20,16 @@ console.log()
 
 let index = 0;
 while (index <= 10) {
-    console.log(`Value of index is ${index}`);
-    index = index + 2
+  console.log(`Value of index is ${index}`);
+  index = index + 2
 }
 console.log()
 
 let myArray = ['Rajiv', 'Rahul', 'Raghav', 'Daljit', 'Uday', 'Maanik'];
 let arr = 0;
 while (arr < myArray.length) {
-    console.log(`My friend ${myArray[arr]}`);
-    arr++;
+  console.log(`My friend ${myArray[arr]}`);
+  arr++;
 }
 console.log()
 

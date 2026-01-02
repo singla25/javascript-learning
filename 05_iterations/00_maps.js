@@ -7,9 +7,9 @@ map.set("name", "Sahil");
 map.set("age", 23);
 map.set(true, "Yes, it's true");
 
-console.log(map);
-console.log(map.get("name")); // "Sahil"
-console.log(map.get(true));   // "Yes, it's true"
+console.log("Map: ", map);
+console.log("Map's Name: ",map.get("name")); // "Sahil"
+console.log("Map true Value: ", map.get(true));   // "Yes, it's true"
 console.log()
 
 console.log(map.size); // 3
