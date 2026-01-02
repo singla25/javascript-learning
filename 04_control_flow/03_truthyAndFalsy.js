@@ -1,6 +1,6 @@
 const userEmail = 'sahil@gmail.com' //string == true value
 if (userEmail) {
-    console.log('Got USer Email')
+    console.log('Got User Email')
 } else {
     console.log("Don't have user email")
 }
@@ -8,7 +8,7 @@ console.log()
 
 const email = ''  //empty == false
 if (email) {
-    console.log('Got USer Email')
+    console.log('Got User Email')
 } else {
     console.log("Don't have user email")
 }
@@ -16,7 +16,7 @@ console.log()
 
 const array = []  //empty == true
 if (array) {
-    console.log('Got USer Email')
+    console.log('Got User Email')
 } else {
     console.log("Don't have user email")
 }
