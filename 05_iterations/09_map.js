@@ -22,9 +22,9 @@ let newArray = myArray
 console.log(newArray)
 console.log()
 
-newArray = myArray
+newArray2 = myArray
             .map((num) => num * 10)
             .map((num) => num - 5)
             .filter( (num) => num >= 40)
-console.log(newArray)
+console.log(newArray2)
 console.log()

@@ -4,9 +4,10 @@ function greet(name) {
     console.log(`Hello, ${name}`);
 }
 
-function processUser(callback) {
+function processUser(greeting) {
     const userName = "Sahil";
-    callback(userName); // Calling the callback function
+    greeting(userName); // Calling the callback function
+    console.log(userName);
 }
 
 processUser(greet);  // Output: Hello, Sahil

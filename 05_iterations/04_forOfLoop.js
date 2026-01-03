@@ -4,10 +4,11 @@ const fruits = ["apple", "banana", "cherry"];
 for (const fruit of fruits) {
   console.log(fruit);
 }
+console.log()
 
 const arr = [1, 2, 3, 4, 5]
 for (const num of arr) {
-    console.log(num);
+  console.log(num);
 }
 console.log()
 
@@ -17,16 +18,16 @@ const name = "Sahil";
 for (const char of name) {
   console.log(char);
 }
+console.log()
 
 const greetings = 'Hello World!'
 for (const greet of greetings) {
-    console.log(`Each char is ${greet}`);
+  console.log(`Each char is ${greet}`);
 }
 console.log()
 
 
 console.log('Maps')
-
 const map = new Map()
 map.set('IN', "India");
 map.set('USA', "United States of America")

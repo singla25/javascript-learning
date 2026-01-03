@@ -20,13 +20,13 @@ console.log()
 
 
 coding.forEach( (item, index, arr) => {
-    console.log(`item => ${item}, index => ${index}, arr => ${arr}`)
+    console.log(`index => ${index}, arr => ${arr}, item => ${item} `)
 })
 console.log()
 
 
 coding.forEach( (i, j, k) => {
-    console.log(`item => ${i}, index => ${j}, arr => ${k}`)
+    console.log(`index => ${j}, arr => ${k}, item => ${i}`)
 })
 console.log()
 
@@ -52,13 +52,12 @@ const myCoding = [
 
 myCoding.forEach( (item) => {
     console.log(`Language Name : ${item.languageName} and Language file name : ${item.languageFileName}`)
-    console.log(item.languageName, item.languageFileName)
+    // console.log(item.languageName, item.languageFileName)
 })
 console.log()
 
 
 const numbers = [1, 2, 3];
-
 numbers.forEach((num, index, arr) => {
   arr[index] = num * 2;
 });

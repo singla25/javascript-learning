@@ -1,4 +1,7 @@
 // for .. in
+// This loop is used to iterate over the enumerable properties (keys) of an object
+
+
 const user = {
   name: "Sahil",
   age: 23,
@@ -11,20 +14,20 @@ for (let key in user) {
 console.log()
 
 const myObject = {
-    js : 'Javascript',
-    cpp : 'C++',
-    rb : 'Ruby',
-    swift : 'Swift by apple'
+  js : 'Javascript',
+  cpp : 'C++',
+  rb : 'Ruby',
+  swift : 'Swift by apple'
 }
 for (let key in myObject) {
-    console.log(`${key} -> ${myObject[key]}`);
+  console.log(`${key} -> ${myObject[key]}`);
 }
 console.log()
 
 
 const programming = ['cpp', 'java', 'php', 'python']
 for (let key in programming) {
-    console.log(`${key} -> ${programming[key]}`)
+  console.log(`${key} -> ${programming[key]}`)
 }
 console.log()
 

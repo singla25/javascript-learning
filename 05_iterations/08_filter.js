@@ -2,8 +2,8 @@
 
 const coding = ['js', 'java', 'cpp', 'python', 'ruby']
 const code = coding.forEach( (item) => {
-    // console.log(item);
-    return item;
+  // console.log(item);
+  return item;
 })
 console.log(code) // it returns nothing because forEach doesn't return anything
 console.log()
@@ -12,9 +12,9 @@ console.log()
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const newNums = []
 myNums.forEach( (num) => {
-    if (num > 4) {
-        newNums.push(num)
-    }
+  if (num > 4) {
+    newNums.push(num)
+  }
 })
 console.log(newNums)
 console.log()
@@ -31,7 +31,7 @@ console.log(`Even Number: `,evenNumber)
 console.log()
 
 const multipleOfThree = numbers.filter( (num) => {
-    return num % 3 == 0;
+  return num % 3 == 0;
 });
 console.log(`Multiple of Three: `, multipleOfThree);
 console.log()
@@ -51,7 +51,7 @@ const books = [
 ];
 
 const userBooks = books.filter( (book) => {
-  return book.publicationYear > 2015 && book.genre === "Fiction";
+  return book.publicationYear > 2018 && book.genre === "Fiction";
 });
 
 console.log("User Books:", userBooks);

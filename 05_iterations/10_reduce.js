@@ -58,3 +58,7 @@ const cart = [
 const total = cart.reduce((acc, item) => acc + item.price, 0);
 console.log(total); // Output: 370
 console.log()
+
+const totalName = cart.reduce((acc, item) => acc + item.itemName, 0);
+console.log(totalName);
+console.log()
