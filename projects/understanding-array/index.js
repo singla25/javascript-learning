@@ -7,7 +7,7 @@ const cart = [
 ];
 
 for (let item of cart) {
-    console.log(`${item.name} | ₹${item.price} | Qty: ${item.qty} | Category: ${item.category} | In-Stock: ${item.inStock}`);
+  console.log(`${item.name} | ₹${item.price} | Qty: ${item.qty} | Category: ${item.category} | In-Stock: ${item.inStock}`);
 }
 console.log();
 
@@ -35,3 +35,18 @@ const grandTotalPrice = cart.reduce((total, item) => total + (item.qty * item.pr
 console.log("Grand Total Price: ");
 console.log(grandTotalPrice);
 console.log()
+
+console.log("Item Details: ");
+cart.forEach(item => {
+  console.log(
+    `Item: ${item.name} | Qty: ${item.qty} | Total: ₹${item.price * item.qty}`
+  );
+});
+console.log()
+
+const totalInStockValue = cart
+  .filter(item => item.inStock)
+  .reduce((sum, item) => sum + item.price * item.qty, 0);
+console.log("Item Total which are in stock: ");
+console.log(totalInStockValue);
+
