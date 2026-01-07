@@ -15,21 +15,37 @@
     createDiv.className = 'main'
     createDiv.id = Math.round(Math.random() * 10 + 1)
 
+    // -----------------Better Approach to add Attribute---------------------
     createDiv.setAttribute('title', 'generated title')
 
     createDiv.style.backgroundColor = 'orange'
     createDiv.style.padding = '12px'
     
-    // createDiv.innerText = "My first div through JS"
-    const addText = document.createTextNode('My first div text through js')
+    // -----------------Method 1 - Add Text------------------------
+    createDiv.innerText = "My first div through JS - innerHTML"
+
+    // -----------------Method 2 - Add Text------------------------
+    const addText = document.createTextNode('My first div text through js - childNode')
     createDiv.appendChild(addText)
 
-    // till now every thing is in console nothing is in web page
+    // // -----till now every thing is in console nothing is in web page-----
 
     document.body.appendChild(createDiv)
     // now we see dic in our webpage
-    
     // now we know how to create a div then we wrap this in a function called createADiv and use that function in where we need
+
+    const div = document.createElement('div')
+    div.className = "created-div"
+    div.id = "2nd div"
+    div.setAttribute('div2', 'js-div2')
+    div.style.background = "grey"
+    div.style.padding = '10px'
+    div.style.margin = '10px'
+    div.innerHTML = "My 2nd Div through innerHTML "
+    const addTextElement = document.createTextNode(' My 2nd Div through - childNode')
+    div.appendChild(addTextElement)
+
+    document.body.appendChild(div)
 
 </script>
 </html>

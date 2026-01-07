@@ -20,6 +20,7 @@
     const parent = document.querySelector('.parent')
     console.log(parent);
     
+    // ---------------Children-----------------------
     console.log(parent.children); // childeen node
     
     console.log(parent.children[1]);
@@ -30,8 +31,17 @@
         console.log(parent.children[i].innerHTML)
     }
 
+    for (i = 0; i < parent.children.length; i=i+2) {
+        if (parent.children[i].innerText === "Wednesday") {
+            parent.children[i].style.color = "blue"
+        } else {
+            parent.children[i].style.color = "yellow"
+        }
+    }
+
     parent.children[1].style.color = 'orange'
     
+    // -------------First Child, Last Element Child and Parent Element----------------
     console.log(parent.firstElementChild);  // firstElementChild
     console.log(parent.lastElementChild);  // lastElementChild
 
@@ -39,7 +49,13 @@
     console.log(day1);
     console.log(day1.parentElement);
     console.log(day1.nextElementSibling);   // nextElementSibling
-    
+
+    const day2 = day1.nextElementSibling
+    console.log(day2);
+    console.log(day2.parentElement);
+    console.log(day2.nextElementSibling);   // nextElementSibling
+
+    // -------------Child Nodes----------------
     console.log('Nodes: ', parent.childNodes)  // most imp
     // in js space and line break is also a node(text)
 </script>
