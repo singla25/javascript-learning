@@ -1,0 +1,89 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Page Centering */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #d7d7d7, #f2f2f2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper */
+#wrapper {
+    width: 350px;
+}
+
+/* Calculator Card */
+.calculator {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Heading */
+.calculator h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Labels */
+.calculator label {
+    display: block;
+    margin: 12px 0 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Inputs & Select */
+.calculator input,
+.calculator select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Focus effect */
+.calculator input:focus,
+.calculator select:focus {
+    outline: none;
+    border-color: #888;
+    background: #fff;
+}
+
+/* Button */
+.calculator button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #555;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover */
+.calculator button:hover {
+    background: #333;
+}
+
+/* Result Box */
+.result {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #222;
+}

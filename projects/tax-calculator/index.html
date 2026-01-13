@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>JavaScript - Tax Calculator</title>
+</head>
+<body>
+
+    <div id="wrapper">
+        <form class="calculator">
+            <h2>Tax Calculator</h2>
+
+            <label for="principalAmount">Enter Principal Amount</label>
+            <input type="number" id="principalAmount" placeholder="₹ Amount" min="0">
+
+            <label for="taxPercentage">Enter Tax Percentage</label>
+            <input type="number" id="taxPercentage" placeholder="% Tax" min="0" step="0.01">
+
+            <label for="noteValue">Select Note Value</label>
+            <select id="noteValue">
+                <option value="100">₹100</option>
+                <option value="500">₹500</option>
+            </select>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div class="result"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
