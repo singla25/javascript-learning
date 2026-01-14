@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+    <link rel="stylesheet" href="eventBasics.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Amazing Images</h2>
+
+        <ul id="images">
+            <li><img id="camel" src="https://images.pexels.com/photos/14137300/pexels-photo-14137300.jpeg" alt="camel"></li>
+            <li><img id="dog" src="https://images.pexels.com/photos/35383164/pexels-photo-35383164.jpeg" alt="dog"></li>
+            <li><img id="car" src="https://images.pexels.com/photos/35568029/pexels-photo-35568029.jpeg" alt="car"
+                     onclick="alert('Car Photo - internal js approach')"></li>
+            <li><img id="lamp" src="https://images.pexels.com/photos/15436153/pexels-photo-15436153.jpeg" alt="lamp"></li>
+            <li><img id="nature" src="https://images.pexels.com/photos/35293768/pexels-photo-35293768.jpeg" alt="nature"></li>
+        </ul>
+
+        <a href="https://google.com" id="google" class="google-btn">Google</a>
+
+        <div class="input-section">
+            <input type="text" id="live-input" placeholder="Type something...">
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="eventBasics.js"></script>
+</body>
+</html>
