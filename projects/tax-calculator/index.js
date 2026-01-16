@@ -6,25 +6,38 @@ form.addEventListener("submit", function (e) {
 
     const amount = parseFloat(document.querySelector("#principalAmount").value);
     const taxPercent = parseFloat(document.querySelector("#taxPercentage").value);
-    const noteValue = document.querySelector("#noteValue").value;
+    const noteValue = parseInt(document.querySelector("#noteValue").value);
+
+    // Validation
+    if (isNaN(amount) || amount <= 0) {
+        result.innerHTML = "❌ Please enter a valid amount";
+        return;
+    }
 
     if (isNaN(taxPercent) || taxPercent < 0) {
         result.innerHTML = "❌ Please enter a valid tax percentage";
         return;
     }
 
-    const taxAmount = (amount * taxPercent) / 100;
-    const totalAmount = amount + taxAmount;
+    // Per transaction calculation
+    const taxPerTxn = (noteValue * taxPercent) / 100;
+    const deductionPerTxn = noteValue + taxPerTxn;
 
-    const notesCount = Math.floor(totalAmount / noteValue);
-    const remainingAmount = (totalAmount % noteValue).toFixed(2);
+    // Total transactions possible
+    const transactions = Math.floor(amount / deductionPerTxn);
 
-    // Display result
+    // Final totals
+    const totalWithdrawn = transactions * noteValue;
+    const totalTaxPaid = transactions * taxPerTxn;
+    const remainingAmount = amount - (totalWithdrawn + totalTaxPaid);
+
+    // Display clean summary
     result.innerHTML = `
-        <p>💰 Amount: ₹${amount}</p>
-        <p>📊 Tax (${taxPercent}%): ₹${taxAmount.toFixed(2)}</p>
-        <p>🧾 Total Amount: ₹${totalAmount.toFixed(2)}</p>
-        <p>💵 Notes of ₹${noteValue}: ${notesCount}</p>
-        <p>💸 Remaining Amount: ₹${remainingAmount}</p>
+        <h3>Transaction Summary</h3>
+        <p>💵 Note Value: ₹${noteValue}</p>
+        <p>🔁 Total Transactions: ${transactions}</p>
+        <p>🏧 Total Withdrawn: ₹${totalWithdrawn.toFixed(2)}</p>
+        <p>📊 Total Tax Paid: ₹${totalTaxPaid.toFixed(2)}</p>
+        <p>💰 Remaining Balance: ₹${remainingAmount.toFixed(2)}</p>
     `;
 });
