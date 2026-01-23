@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            gap: 20px;
+        }
+
+        /* Heading */
+        #heading {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        /* Buttons container effect */
+        button {
+            padding: 12px 28px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Start Button */
+        #start {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+
+        #start:hover {
+            background-color: #27ae60;
+            transform: scale(1.05);
+        }
+
+        /* Stop Button */
+        #stop {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        #stop:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+        /* Click effect */
+        button:active {
+            transform: scale(0.95);
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="heading">setInterval</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+    <script>
+        // Simple setInterval
+        // setInterval(()=>{
+        //     console.log('Welcome Bro!')
+        // }, 1000)
+
+
+        // function call with argument setTimeout
+        // const greet = (name)=>{
+        //     console.log(`Welcome ${name} Bro!`)
+        // }
+        // const setIntervalGreet = setInterval(greet, 1000, 'Sahil')
+
+
+        const start = document.querySelector('#start');
+        const stop = document.querySelector('#stop');
+
+        let setIntervalDate;
+
+        const date = (str)=>{
+            console.log(str, Date.now());
+        }
+
+        start.addEventListener('click', ()=>{
+            setIntervalDate = setInterval(date, 'Hi ');
+        });
+
+        stop.addEventListener('click', ()=>{
+            clearInterval(setIntervalDate);
+            console.log('Interval Stopped');
+        })
+    </script>
+</body>
+</html>
