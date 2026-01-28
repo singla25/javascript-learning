@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* BODY */
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+        }
+
+        /* MAIN */
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px 60px;
+        }
+
+        /* PAGE TITLE */
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #00e5ff;
+            letter-spacing: 1px;
+        }
+
+        /* PROJECT GRID */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* CATEGORY CARD */
+        .projects > div {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            padding: 22px;
+            border-radius: 16px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .projects > div:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+        }
+
+        /* CATEGORY HEADINGS (AUTO) */
+        .dom::before,
+        .application::before,
+        .asynchronous::before {
+            display: block;
+            margin-bottom: 18px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffd54f;
+        }
+
+        .dom::before {
+            content: "DOM Projects";
+        }
+
+        .application::before {
+            content: "Applications";
+        }
+
+        .asynchronous::before {
+            content: "Asynchronous JS";
+        }
+
+        /* PROJECT LINKS */
+        .project-link {
+            display: block;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        /* ARROW ICON */
+        .project-link::after {
+            content: "↗";
+            position: absolute;
+            right: 18px;
+            opacity: 0;
+            transition: opacity 0.3s ease, right 0.3s ease;
+        }
+
+        /* HOVER EFFECT */
+        .project-link:hover {
+            background: linear-gradient(135deg, #00e5ff, #00bcd4);
+            color: #000;
+            padding-left: 20px;
+        }
+
+        .project-link:hover::after {
+            opacity: 1;
+            right: 14px;
+        }
+
+        /* LAST LINK FIX */
+        .project-link:last-child {
+            margin-bottom: 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>JS Projects</h1>
+        <div class="projects">
+            <div class="dom">
+                <a href="./DOM/bmi-calculator/index.html" class="project-link">Project - BMI Calculator</a>
+                <a href="./DOM/color-changer/index.html" class="project-link">Project - Color Change</a>
+                <a href="./DOM/digital-clock/index.html" class="project-link">Project - Digital Clock</a>
+                <a href="./DOM/guess-the-number/index.html" class="project-link">Project - Guess the Number</a>
+            </div>
+            <div class="application">
+                <a href="./Application/calculator/index.html" class="project-link">Project - Calculator</a>
+                <a href="./Application/tax-calculator/index.html" class="project-link">Project - Tax Calculator</a>
+                <a href="./Application/weatherApplicationApp/index.html" class="project-link">Project - Weather Application</a>
+            </div>
+            <div class="asynchronous">
+                <a href="./Asynchronous/unlimited-color/index.html" class="project-link">Project - Unlimited Background Color</a>
+                <a href="./Asynchronous/keyboard/index.html" class="project-link">Project - Keyboard Key</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

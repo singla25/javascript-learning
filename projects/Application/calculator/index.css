@@ -1,0 +1,86 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #ffffff;
+}
+
+/* CALCULATOR CONTAINER */
+.calculator {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    width: 340px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* HEADING */
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #00e5ff;
+}
+
+/* INPUT FIELDS */
+.calculator input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* BUTTONS */
+.calculator button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00e5ff, #00bcd4);
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* BUTTON HOVER */
+.calculator button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 229, 255, 0.5);
+}
+
+/* BUTTON ACTIVE */
+.calculator button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* RESULT */
+#result {
+    display: none;
+    margin-top: 15px;
+    padding: 14px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #ffd54f;
+}
