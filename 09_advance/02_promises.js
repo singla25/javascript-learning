@@ -1,6 +1,9 @@
+// const promise = new Promise((resolve, reject)=>{
+//     Do an async task
+//     DB calls, cryptography, network
+// })
+
 const promiseOne = new Promise((resolve, reject) => {
-    // Do an async task
-    // DB calls, cryptography, network
     setTimeout(function(){
         console.log('Async task is complete');
         resolve()
@@ -62,7 +65,7 @@ promiseFour
 
 // This runs before every because it runs immediately
 const promiseFive = new Promise((resolve, reject)=>{
-    let error = true;
+    let error = false;
 
     if(!error){
         resolve({
@@ -82,7 +85,7 @@ promiseFive
     console.log(error);
 })
 
-
+// a complete example
 const promiseSix = new Promise((resolve, reject)=>{
     setTimeout(()=>{
         let error = false;
@@ -109,8 +112,83 @@ promiseSix
     console.log(error);
 })
 .finally(()=>{
-    console.log("The promise is either resolved or ef rejected")
+    console.log("The promise is either resolved or rejected")
+    console.log()
 })
 
+// finally is something like default which always runs whether resolve ho yeh reject ho
 
+
+// async and await
+const promiseSeven = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        let error = false;
+        if(!error){
+            resolve({
+                username: 'Sahil',
+                email : 'sahil@mailinator.com'
+            })
+        } else {
+            reject('Error: Data is not Working')
+        }
+    }, 6000)
+});
+
+async function consumePromiseSeven() {
+    const response = await promiseSeven;
+    console.log(response);
+    console.log()
+}
+
+consumePromiseSeven();
+
+// const promiseEight = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         let error = true;
+//         if(!error){
+//             resolve({
+//                 username: 'Sahil',
+//                 email : 'sahil@mailinator.com'
+//             })
+//         } else {
+//             reject('Error: Data is not Working')
+//         }
+//     }, 7000)
+// });
+
+// async function consumePromiseEight() {
+//     const response = await promiseEight;
+//     console.log(response);
+// }
+
+// consumePromiseEight();
+
+// This thing gives error because we can't add catch block in this
+// due to which here nothing is their to handle the error block
+
+
+const promiseEight = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        let error = true;
+        if(!error){
+            resolve({
+                username: 'Sahil',
+                email : 'sahil@mailinator.com'
+            })
+        } else {
+            reject('Error: Data is not Working')
+        }
+    }, 7000)
+});
+
+async function consumePromiseEight() {
+    try {
+        const response = await promiseEight;
+        console.log(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+consumePromiseEight();
 
