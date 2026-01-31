@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Card</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: #fff;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            background: #24292e;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    const API_URL = 'https://api.github.com/users/hiteshchoudhary';
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', API_URL);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+
+            // 1️⃣ Parse response
+            const data = JSON.parse(xhr.responseText);
+
+            // 2️⃣ Extract required fields (CLEAR & READABLE)
+            const userData = {
+                id: data.id,
+                name: data.name,
+                avatar: data.avatar_url,
+                location: data.location,
+                followers: data.followers,
+                profileUrl: data.html_url
+            };
+
+            // 3️⃣ Debug / Verify data
+            console.table(userData);
+
+            // 4️⃣ Render UI
+            renderCard(userData);
+        }
+    };
+
+    xhr.send();
+
+    // 5️⃣ UI Function (separation of concern)
+    function renderCard(user) {
+        const card = `
+            <div class="card">
+                <img src="${user.avatar}" alt="Profile Image">
+                <h2>${user.id}</h2>
+                <h2>${user.name}</h2>
+                <p>📍 ${user.location}</p>
+                <p>👥 Followers: ${user.followers}</p>
+                <a href="${user.profileUrl}" target="_blank">View GitHub</a>
+            </div>
+        `;
+
+        document.body.innerHTML = card;
+    }
+</script>
+
+</body>
+</html>
