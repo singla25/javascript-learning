@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+        <h1>💰 Expense Tracker</h1>
+
+        <form id="form">
+            <input name="title" placeholder="Title" required />
+            <input name="amount" type="number" placeholder="Amount" required />
+
+            <div class="row">
+                <select name="type">
+                    <option value="expense">Expense</option>
+                    <option value="income">Income</option>
+                </select>
+                <input name="category" placeholder="Category" />
+            </div>
+
+            <input name="date" type="date" required />
+            <button>Add Transaction</button>
+        </form>
+
+        <div id="transactions"></div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
