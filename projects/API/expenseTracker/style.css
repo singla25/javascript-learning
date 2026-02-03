@@ -5,6 +5,7 @@
     font-family: "Segoe UI", system-ui, sans-serif;
 }
 
+/* ===== BODY ===== */
 body {
     min-height: 100vh;
     background: linear-gradient(135deg, #0f172a, #020617);
@@ -15,25 +16,54 @@ body {
     color: #e5e7eb;
 }
 
-/* App Card */
+/* ===== APP CARD ===== */
 .app {
     width: 100%;
     max-width: 420px;
     background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     padding: 24px;
     border-radius: 18px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Heading */
+/* ===== HEADING ===== */
 h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.8rem;
 }
 
-/* Form */
+/* ===== SUMMARY BAR ===== */
+.summary {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.06);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.summary div {
+    text-align: center;
+}
+
+.summary span {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.summary strong {
+    display: block;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+#income { color: #22c55e; }
+#expense { color: #ef4444; }
+#balance { color: #3b82f6; }
+
+/* ===== FORM ===== */
 form {
     display: flex;
     flex-direction: column;
@@ -55,6 +85,7 @@ input::placeholder {
     color: #9ca3af;
 }
 
+/* Custom select arrow */
 select {
     appearance: none;
     background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
@@ -68,13 +99,13 @@ select option {
     color: #000;
 }
 
-/* Row for type + category */
+/* Row (type + category) */
 .row {
     display: flex;
     gap: 10px;
 }
 
-/* Button */
+/* ===== BUTTON ===== */
 button {
     padding: 12px;
     border-radius: 12px;
@@ -92,14 +123,21 @@ button:hover {
     box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
 }
 
-/* Transactions List */
+/* ===== TRANSACTIONS LIST ===== */
 #transactions {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* Transaction Card */
+#transactions p {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* ===== TRANSACTION CARD ===== */
 .card {
     background: rgba(255, 255, 255, 0.08);
     padding: 12px 14px;
@@ -120,14 +158,21 @@ button:hover {
     border-color: #ef4444;
 }
 
+/* Card top */
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .card strong {
-    display: block;
     font-size: 15px;
 }
 
 .card span {
-    float: right;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
 }
 
 .card small {
@@ -135,4 +180,39 @@ button:hover {
     margin-top: 4px;
     font-size: 12px;
     color: #9ca3af;
+    opacity: 0.75;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.actions button {
+    flex: 1;
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+.actions .edit {
+    background: #22c55e;
+    color: white;
+}
+
+.actions .edit:hover {
+    background: #16a34a;
+}
+
+.actions .delete {
+    background: #ef4444;
+    color: white;
+}
+
+.actions .delete:hover {
+    background: #dc2626;
 }

@@ -10,11 +10,19 @@ export function renderTransactions(list) {
     list.forEach(item => {
         const div = document.createElement("div");
         div.className = `card ${item.type}`;
+
         div.innerHTML = `
-            <strong>${item.title}</strong>
-            <span>₹${item.amount}</span>
-            <small>${item.category} • ${item.date}</small>
+            <div class="card-top">
+                <strong>${item.title}</strong>
+                <span>₹${item.amount}</span>
+            </div>
+            <small>${item.category || "General"} • ${item.date}</small>
+            <div class="actions">
+                <button class="edit" data-id="${item.id}">Edit</button>
+                <button class="delete" data-id="${item.id}">Delete</button>
+            </div>
         `;
+
         container.appendChild(div);
     });
 }

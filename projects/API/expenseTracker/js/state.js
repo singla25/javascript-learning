@@ -1,5 +1,6 @@
 export const state = {
     transactions: [],
     loading: false,
-    error: null
+    error: null,
+    editingId: null
 };
